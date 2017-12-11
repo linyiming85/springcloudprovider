@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.unicom.dao
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: password
+  application:
+    name: service-user
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.0.109.25:8761/eureka/
+
+

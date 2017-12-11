@@ -1,0 +1,36 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+.idea/workspace.xml  
+.idea/dictionaries/myj.xml  
+.idea/  
+.DS_Store  
+*.classpath  
+*.project  
+.settings  
+.project  
+.target  
+.classpath  
+**/.settings  
+**/.classpath  
+**/.eclipse  
+**/target/  
+target/  
+bin/  
+.svn  
+*.iml
