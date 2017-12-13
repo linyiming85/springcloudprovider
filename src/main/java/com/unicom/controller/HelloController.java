@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,6 @@ import java.util.List;
  * Created by linym on 2017/12/10.
  */
 
-@EnableEurekaClient
 @RestController
 public class HelloController {
 
@@ -41,5 +41,12 @@ public class HelloController {
         user.setUserName(username);
         List<User> userList = userDao.list(user);
         return JSON.toJSONString(userList);
+    }
+    @Value("${unicom.server.name}")
+    String name;
+
+    @RequestMapping(value = "/getname",method = RequestMethod.GET)
+    public String getName(){
+        return name;
     }
 }
